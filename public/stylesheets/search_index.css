@@ -1,0 +1,291 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+#cssmenu,
+#cssmenu ul,
+#cssmenu ul li,
+#cssmenu ul li a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#cssmenu:after,
+#cssmenu > ul:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+#cssmenu {
+  padding-left:5%;
+  padding-right:5%;
+  width: auto;
+  border-bottom: 3px solid #47c9af;
+  font-family: Raleway, sans-serif;
+  line-height: 1;
+}
+#cssmenu ul {
+  background: transparent;
+}
+#cssmenu > ul > li {
+  float: left;
+}
+#cssmenu.align-center > ul {
+  font-size: 0;
+  text-align: center;
+}
+#cssmenu.align-center > ul > li {
+  display: inline-block;
+  float: none;
+}
+#cssmenu.align-right > ul > li {
+  float: right;
+}
+#cssmenu.align-right > ul > li > a {
+  margin-right: 0;
+  margin-left: -4px;
+}
+#cssmenu > ul > li > a {
+  z-index: 2;
+  padding: 18px 25px 12px 25px;
+  font-size: 15px;
+  font-weight: 400;
+  text-decoration: none;
+  color:white;
+  -webkit-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  -ms-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+  margin-right: -4px;
+}
+#cssmenu > ul > li.active > a,
+#cssmenu > ul > li:hover > a,
+#cssmenu > ul > li > a:hover {
+  color: #ffffff;
+}
+#cssmenu > ul > li > a:after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  width: 100%;
+  height: 120%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  content: "";
+  -webkit-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+  -webkit-transform: perspective(5px) rotateX(2deg);
+  -webkit-transform-origin: bottom;
+  -moz-transform: perspective(5px) rotateX(2deg);
+  -moz-transform-origin: bottom;
+  transform: perspective(5px) rotateX(2deg);
+  transform-origin: bottom;
+}
+#cssmenu > ul > li.active > a:after,
+#cssmenu > ul > li:hover > a:after,
+#cssmenu > ul > li > a:hover:after {
+  background: #47c9af;
+}
+
+
+
+.contain{
+    /*min-width: 200px !important;*/
+    position: relative;
+    width: 1200px;
+    height:auto;
+    background-size: 100% 100%;
+    color:rgb(144, 223, 209);
+}
+
+/* .topnav {
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: lightblue;
+    width: 30%;
+}
+
+.topnav a {
+    float: left;
+    color: darkblue;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: royalblue;
+    color: white;
+} */
+
+.header{
+    position: relative;
+    width:70%;
+    height: 100px;
+    margin:auto;
+}
+
+.header>img {
+    max-width: 100%;
+    max-height: 70%;
+    align-content: center;
+    margin-left: 70px;
+    margin-right: 60px;
+}
+
+form {
+    position: relative;
+    width: 560px;
+    margin: 0 auto;
+}
+
+
+input {
+    width: 100%;
+    height: 42px;
+    padding-left: 13px;
+}
+
+button {
+    height: 42px;
+    width: 42px;
+    cursor: pointer;
+    position: absolute;
+}
+
+.search{
+    float: left;
+    padding:0;
+    margin:0;
+    width: 500px;
+    height:36px;
+    background: #fafafa;
+    color: #9e9c9c;
+    border:2px;
+    solid-color: #628DFF;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.button {
+    float: right;
+    padding:0;margin:0;
+    border: 2px solid #628DFF;
+    border-top-right-radius:5px;
+    border-bottom-right-radius:5px;
+}
+
+.button>input {
+    height:36px;
+    line-height:36px;
+    padding:0 12px;
+    background:#628DFF;color:#fff;
+}
+
+#getInput-text {
+    visibility: inherit;
+}
+
+
+.SearchTable{
+    table-layout: fixed;
+    width:100%;
+    border-collapse: collapse;
+    margin-top: 50px;
+    color:rgb(144, 223, 209);
+    /* border: solid rgb(144, 223, 209); */
+
+}
+ tbody>tr>:nth-child(1){
+    width:10%;
+    text-align: center;
+    border: 2px solid rgb(144, 223, 209);
+}
+tbody>tr>:nth-child(2) {
+    width: 10%;
+    text-align: center;
+}
+
+tbody>tr>:nth-child(3) {
+    width: 5%;
+    text-align: center;
+    word-wrap: break-word;
+}
+tbody>tr>:nth-child(4) {
+    width: 10%;
+    text-align: center;
+    word-wrap: break-word;
+}
+tbody>tr>:nth-child(5) {
+    width: 5%;
+    text-align: center;
+    word-wrap: break-word;
+}
+tbody>tr>:nth-child(6) {
+    width: 10%;
+    text-align: left;
+    word-wrap: break-word;
+}
+tbody>tr>:nth-child(7) {
+    width: 5%;
+    text-align: left;
+    word-wrap: break-word;
+}
+tbody>tr>:nth-child(8) {
+    width: 5%;
+    text-align: left;
+    word-wrap: break-word;
+}
+tbody>tr>:nth-child(9) {
+    width: 5%;
+    text-align: left;
+    word-wrap: break-word;
+}
+tbody>tr>:nth-child(10) {
+    width: 45%;
+    text-align: left;
+} 
+.name {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    color:  rgb(144, 223, 209);
+    font-size: 40px;
+}
+
+th, td {
+    font-size:18px;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    color: rgb(144, 223, 209);
+}
+
+img{
+    opacity: 1;
+    display: block;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    border-radius: 15px;
+  }
+
+  .button>input{
+    cursor:pointer;
+    border:transparent;
+    /* height: 45px; */
+}
+
+

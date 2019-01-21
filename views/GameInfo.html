@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="CIS550">
+<head>
+    <title>GameInfo!</title>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular.js"></script>
+    <link rel="stylesheet"  type="text/css"  href="stylesheets/gamepage.css">
+    <script src="javascripts/app.js" type="text/javascript"></script>
+</head>
+
+<body ng-controller="gameController" ng-style="{'background-image':'url(' + background + ')'}">
+<div class='wrapper'>
+    <h1>{{gameName}}</h1>
+</div>
+<div id='cssmenu' >
+    <ul>
+        <li><a href='/'>Home</a></li>
+        <li><a href='/filter'>Explore</a></li>
+        <li><a href='/recommendation'>Recommended</a></li>
+    </ul>
+</div>
+
+<div class='wrapper'>
+    <div class='box A' style='width:500px;float:left;padding-top:5%;padding-left:3%;padding-right:2%;padding-bottom:5%;'>
+        <img ng-src={{image}} align:middle>
+        <p>{{description}}</p>
+        <p></p>
+        <h3>Like this game? <a href={{url}}>Download it now!</a></h3>
+        <h3><a id="reviewName" name={{gameID}} href='/recommendation2'>Find out what others are playing!</a></h3>
+        <script>
+            document.getElementById("reviewName").addEventListener("click", function () {
+                localStorage.setItem("pass", document.getElementById('reviewName').name);
+            });
+        </script>
+    </div>
+    <div class='box C' style='width:500px;float:left; padding-top:2%;padding-left:2%;padding-right:3%;'>
+        <h2>About the Game:</h2>
+        <table class="blueTable">
+            <tbody>
+            <tr>
+                <td>Name</td>
+                <td>{{gameName}}</td>
+            </tr>
+            <tr>
+                <td>Release Date</td>
+                <td>{{releaseDate}}</td>
+            </tr>
+            <tr>
+                <td>Required Age</td>
+                <td>{{rqAge}}</td>
+            </tr>
+            <tr>
+                <td>Rating</td>
+                <td>{{rating}}</td>
+            </tr>
+            <tr>
+                <td>SteamSpy Player Estimate</td>
+                <td>{{playerCount}}</td>
+            </tr>
+            <tr>
+                <td>Price</td>
+                <td>{{price}}</td>
+            </tr>
+            <tr>
+                <td>Platform</td>
+                <td>{{platform}}</td>
+            </tr>
+            <tr>
+                <td>Genres</td>
+                <td>{{genres}}</td>
+            </tr>
+            <tr>
+                <td>Categories</td>
+                <td>{{categories}}</td>
+            </tr>
+            </tbody>
+            </tr>
+        </table>
+        <div class='reviews' style='width:500px;float:left;padding:2%'>
+            <h4><a id="reviewID" name={{gameID}} href='/reviews'> Read More Reviews</a></h4>
+            <script>
+                document.getElementById("reviewID").addEventListener("click", function () {
+                    localStorage.setItem("transfer", document.getElementById('reviewID').name);
+                });
+            </script>
+            <ul style="list-style-type:circle">
+                <li><em>{{reviews1}}</em></li>
+                <li><em>{{reviews2}}</em></li>
+                <li><em>{{reviews3}}</em></li>
+                <li><em>{{reviews4}}</em></li>
+                <li><em>{{reviews5}}</em></li>
+            </ul>
+            <p style='width:500px;float:left;padding-bottom:15%;padding-left:8%'>
+                    <textarea placeholder="Add your review:" rows="10" cols="80" name="addReview" ng-model="addReview"
+                              value=""></textarea><button type="button" ng-click="Insert()" class="button">Add</button></br>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="CIS550">
+<head>
+    <meta charset="UTF-8">
+    <title>HomePage</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <!--<link rel="stylesheet" href="stylesheets/search_index.css">-->
+    <script type="text/javascript" src="components/angular/angular.js"></script>
+    <script src="javascripts/app.js" type="text/javascript"></script>
+
+    <!-- <li class="active" align = "right"><a href="/recommendation">Recommend </a></li> -->
+</head>
+<body data-spy="scroll" data-target=".scrollspy">
+<style>
+    .container1 {
+        position: absolute;
+        left: 100px;
+        top: 450px;
+        cursor:pointer;
+    }
+    .image{
+        /* position: absolute; */
+        cursor:pointer;
+        opacity: 1;
+        display: block;
+        transition: .5s ease;
+        backface-visibility: hidden;
+    }
+    .middle {
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    .container1:hover .image, .container2:hover .image,.container3:hover .image,.container4:hover .image,
+    .container5:hover .image, .container6:hover .image, .container7:hover .image, .container8:hover .image,
+    .container9:hover .image, .container10:hover .image, .container11:hover .image,
+    .container12:hover .image, .container13:hover .image, .container14:hover .image,
+    .container15:hover .image, .container16:hover .image, .container17:hover .image,
+    .container18:hover .image{
+        opacity: 0.5;
+    }
+    .container1:hover .middle, .container2:hover .middle, .container3:hover .middle,
+    .container4:hover .middle, .container5:hover .middle, .container6:hover .middle,
+    .container7:hover .middle, .container8:hover .middle, .container9:hover .middle,
+    .container10:hover .middle, .container11:hover .middle, .container12:hover .middle,
+    .container13:hover .middle, .container14:hover .middle, .container15:hover .middle,
+    .container16:hover .middle, .container17:hover .middle, .container18:hover .middle{
+        opacity: 1;
+    }
+    .text1 {
+        color: black;
+        font-size: 32px;
+        font-family: Impact, Charcoal, sans-serif;
+    }
+    .text2 {
+        color: black;
+        font-size: 16px;
+        font-family: "Lucida Console", Monaco, monospace;
+    }
+    .text3 {
+        color: rgb(134, 18, 18);
+        font-size: 32px;
+        font-family: Impact, Charcoal, sans-serif;
+        left: 100px;
+        position: absolute;
+        top: 400px;
+    }
+    .text4 {
+        color: rgb(38, 56, 158);
+        font-size: 32px;
+        font-family: Impact, Charcoal, sans-serif;
+        left: 100px;
+        position: absolute;
+        top: 820px;
+    }
+    .text5 {
+        color: rgb(31, 73, 33);
+        font-size: 32px;
+        font-family: Impact, Charcoal, sans-serif;
+        left: 100px;
+        position: absolute;
+        top: 1240px;
+    }
+    .text6 {
+        color: rgb(182, 66, 21);
+        font-size: 32px;
+        font-family: Impact, Charcoal, sans-serif;
+        left: 100px;
+        position: absolute;
+        top: 1660px;
+    }
+
+    .container2{
+        position: absolute;
+        left: 460px;
+        top: 450px;
+        cursor:pointer;
+    }
+    .container3{
+        position: absolute;
+        left: 820px;
+        top: 450px;
+        cursor:pointer;
+    }
+    .container4{
+        position: absolute;
+        left: 100px;
+        top: 620px;
+        cursor:pointer;
+    }
+    .container5{
+        position: absolute;
+        left: 460px;
+        top: 620px;
+        cursor:pointer;
+    }
+    .container6{
+        position: absolute;
+        left: 820px;
+        top: 620px;
+        cursor:pointer;
+    }
+    .container7{
+        position: absolute;
+        left: 100px;
+        top: 870px;
+        cursor:pointer;
+    }
+    .container8{
+        position: absolute;
+        left: 460px;
+        top: 870px;
+        cursor:pointer;
+    }
+    .container9{
+        position: absolute;
+        left: 820px;
+        top: 870px;
+        cursor:pointer;
+    }
+    .container10{
+        position: absolute;
+        left: 100px;
+        top: 1040px;
+        cursor:pointer;
+    }
+    .container11{
+        position: absolute;
+        left: 460px;
+        top: 1040px;
+        cursor:pointer;
+    }
+    .container12{
+        position: absolute;
+        left: 820px;
+        top: 1040px;
+        cursor:pointer;
+    }
+    .container13{
+        position: absolute;
+        left: 100px;
+        top: 1290px;
+        cursor:pointer;
+    }
+    .container14{
+        position: absolute;
+        left: 460px;
+        top: 1290px;
+        cursor:pointer;
+    }
+    .container15{
+        position: absolute;
+        left: 820px;
+        top: 1290px;
+        cursor:pointer;
+    }
+    .container16{
+        position: absolute;
+        left: 100px;
+        top: 1460px;
+        cursor:pointer;
+    }
+    .container17{
+        position: absolute;
+        left: 460px;
+        top: 1460px;
+        cursor:pointer;
+    }
+    .container18{
+        position: absolute;
+        left: 820px;
+        top: 1460px;
+        cursor:pointer;
+    }
+    img {
+        border-radius: 8px;
+    }
+    .img1{
+        position: absolute;
+        left: 100px;
+        top: 1710px;
+        cursor:pointer;
+    }
+    .centered {
+        color: white;
+        font-size: 52px;
+        font-family: Impact, Charcoal, sans-serif;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-55%, -50%);
+    }
+    input::placeholder{
+        font-size: 15px;
+
+    }
+.button{
+    height:45px;
+    width:45px;
+    background:#628DFF;
+    border-color:transparent;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.button>input{
+    cursor:pointer;
+    border:transparent;
+    height: 45px;
+}
+
+</style>
+
+<div ng-controller="HomePageController">
+    <div align="center" class="header">
+        <img style="cursor: pointer" src="images/HomePage.PNG" align="middle" width="45%" height="45%" onclick="location.href='/filter';">
+    </div>
+    <form>
+        <!--<input style="font-size: 14px; font-family: Arial; border: none; background: none;" name="search" type="hidden" value=""/>-->
+        <div id="GameName">
+                <span class= "search"><input name="GameName" ng-model= "GameName" value = '' placeholder="Input Your Favorite GAME"
+                                             style="width: 550px; height: 45px;line-height: 45px;padding: 0.5px; outline: none;"></span>
+            <span class="button"><input type="submit" ng-model="SearchButton" ng-click="SearchGame()" value="GO"></span></div>
+    </form>
+
+    <div class="text3">HOTTEST GAMES</div>
+
+    <div class="container1"  ng-click="Goto(hottestGames[0][0])">
+        <img class="image" alt="Avatar" id = "g1" ng-src= {{hottestGames[0][2]}} name = {{hottestGames[0][0]}} style="width:350px;height:auto;">
+        <div class="middle">
+            <div class="text1">{{hottestGames[0][0]}}</div>
+            <div class="text2">Rating: {{hottestGames[0][1]}}</div>
+        </div></div>
+
+    <div class="container2" ng-click="Goto(hottestGames[1][0])">
+        <img class="image" alt="Avatar" id = "g2" ng-src= {{hottestGames[1][2]}} name = {{hottestGames[1][0]}} style="width:350px;height:auto;">
+        <div class="middle">
+            <div class="text1">{{hottestGames[1][0]}}</div>
+            <div class="text2">Rating: {{hottestGames[1][1]}}</div>
+        </div></div>
+
+    <div class="container3" ng-click="Goto(hottestGames[2][0])">
+        <img class="image" alt="Avatar" id = "g3" ng-src= {{hottestGames[2][2]}} name = {{hottestGames[2][0]}} style="width:350px;height:auto;" >
+        <div class="middle">
+            <div class="text1">{{hottestGames[2][0]}}</div>
+            <div class="text2">Rating: {{hottestGames[2][1]}}</div>
+        </div></div>
+
+    <div class="container4"  ng-click="Goto(hottestGames[3][0])">
+        <img class="image" alt="Avatar" id = "g4" ng-src= {{hottestGames[3][2]}} name = {{hottestGames[3][0]}} style="width:350px;height:auto;">
+        <div class="middle">
+            <div class="text1">{{hottestGames[3][0]}}</div>
+            <div class="text2">Rating: {{hottestGames[3][1]}}</div>
+        </div></div>
+
+    <div class="container5" ng-click="Goto(hottestGames[4][0])">
+        <img class="image" alt="Avatar" id = "g5" ng-src= {{hottestGames[4][2]}} name = {{hottestGames[4][0]}} style="width:350px;height:auto;" >
+        <div class="middle">
+            <div class="text1">{{hottestGames[4][0]}}</div>
+            <div class="text2">Rating: {{hottestGames[4][1]}}</div>
+        </div></div>
+
+    <div class="container6" ng-click="Goto(hottestGames[6][0])">
+        <img class="image" alt="Avatar" id = "g6" ng-src= {{hottestGames[6][2]}} name = {{hottestGames[6][0]}} style="width:350px;height:auto;" >
+        <div class="middle">
+            <div class="text1">{{hottestGames[6][0]}}</div>
+            <div class="text2">Rating: {{hottestGames[6][1]}}</div>
+        </div></div>
+
+    <div class="text4">LATEST GAMES</div>
+
+    <div class="container7" ng-click="Goto(latestGames[0][0])">
+        <img class="image" alt="Avatar" id = "g7" ng-src= {{latestGames[0][2]}} name = {{latestGames[0][0]}} style="width:350px;height:auto;" >
+        <div class="middle">
+            <div class="text1">{{latestGames[0][0]}}</div>
+            <div class="text2">Rating: {{latestGames[0][1]}}</div>
+        </div></div>
+
+    <div class="container8" ng-click="Goto(latestGames[7][0])">
+        <img class="image" alt="Avatar" id = "g8" ng-src= {{latestGames[7][2]}} name = {{latestGames[7][0]}} style="width:350px;height:auto;">
+        <div class="middle">
+            <div class="text1">{{latestGames[7][0]}}</div>
+            <div class="text2">Rating: {{latestGames[7][1]}}</div>
+        </div></div>
+
+    <div class="container9" ng-click="Goto(latestGames[9][0])">
+        <img class="image" alt="Avatar" id = "g9" ng-src= {{latestGames[9][2]}} name = {{latestGames[9][0]}} style="width:350px;height:auto;" >
+        <div class="middle">
+            <div class="text1">{{latestGames[9][0]}}</div>
+            <div class="text2">Rating: {{latestGames[9][1]}}</div>
+        </div></div>
+
+    <div class="container10" ng-click="Goto(latestGames[3][0])">
+        <img class="image" alt="Avatar" id = "g10" ng-src= {{latestGames[3][2]}} name = {{latestGames[3][0]}} style="width:350px;height:auto;" >
+        <div class="middle">
+            <div class="text1">{{latestGames[3][0]}}</div>
+            <div class="text2">Rating: {{latestGames[3][1]}}</div>
+        </div></div>
+
+    <div class="container11" ng-click="Goto(latestGames[4][0])">
+        <img class="image" alt="Avatar" id = "g11" ng-src= {{latestGames[4][2]}} name = {{latestGames[4][0]}} style="width:350px;height:auto;" >
+        <div class="middle">
+            <div class="text1">{{latestGames[4][0]}}</div>
+            <div class="text2">Rating: {{latestGames[4][1]}}</div>
+        </div></div>
+
+    <div class="container12" ng-click="Goto(latestGames[6][0])">
+        <img class="image" alt="Avatar" id = "g12" ng-src= {{latestGames[6][2]}} name = {{latestGames[6][0]}} style="width:350px;height:auto;" >
+        <div class="middle">
+            <div class="text1">{{latestGames[6][0]}}</div>
+            <div class="text2">Rating: {{latestGames[6][1]}}</div>
+        </div></div>
+
+    <div class="text5">BEST FREE GAMES</div>
+
+    <div class="container13" ng-click="Goto(freeGames[0][0])">
+        <img class="image" alt="Avatar" id = "g13" ng-src= {{freeGames[0][2]}} name = {{freeGames[0][0]}} style="width:350px;height:auto;" >
+        <div class="middle">
+            <div class="text1">{{freeGames[0][0]}}</div>
+            <div class="text2">Rating: {{freeGames[0][1]}}</div>
+        </div></div>
+
+    <div class="container14" ng-click="Goto(freeGames[1][0])">
+        <img class="image" alt="Avatar" id = "g14" ng-src= {{freeGames[1][2]}} name = {{freeGames[1][0]}} style="width:350px;height:auto;" >
+        <div class="middle">
+            <div class="text1">{{freeGames[1][0]}}</div>
+            <div class="text2">Rating: {{freeGames[1][1]}}</div>
+        </div></div>
+
+    <div class="container15" ng-click="Goto(freeGames[2][0])">
+        <img class="image" alt="Avatar" id = "g15" ng-src= {{freeGames[2][2]}} name = {{freeGames[2][0]}} style="width:350px;height:auto;" >
+        <div class="middle">
+            <div class="text1">{{freeGames[2][0]}}</div>
+            <div class="text2">Rating: {{freeGames[2][1]}}</div>
+        </div></div>
+
+    <div class="container16" ng-click="Goto(freeGames[3][0])">
+        <img class="image" alt="Avatar" id = "g16" ng-src= {{freeGames[3][2]}} name = {{freeGames[3][0]}} style="width:350px;height:auto;" >
+        <div class="middle">
+            <div class="text1">{{freeGames[3][0]}}</div>
+            <div class="text2">Rating: {{freeGames[3][1]}}</div>
+        </div></div>
+
+    <div class="container17" ng-click="Goto(freeGames[4][0])">
+        <img class="image" alt="Avatar" id = "g17" ng-src= {{freeGames[4][2]}} name = {{freeGames[4][0]}} style="width:350px;height:auto;" >
+        <div class="middle">
+            <div class="text1">{{freeGames[4][0]}}</div>
+            <div class="text2">Rating: {{freeGames[4][1]}}</div>
+        </div></div>
+
+    <div class="container18" ng-click="Goto(freeGames[5][0])">
+        <img class="image" alt="Avatar" id = "g18" ng-src= {{freeGames[5][2]}} name = {{freeGames[5][0]}} style="width:350px;height:auto;" >
+        <div class="middle">
+            <div class="text1">{{freeGames[5][0]}}</div>
+            <div class="text2">Rating: {{freeGames[5][1]}}</div>
+        </div></div>
+</div>
+<div class="text6">RECOMMENDATIONS FOR YOU</div>
+<div class = 'img1' style='padding-bottom:7%;'>
+    <a href="/recommendation">
+        <img src="images/gamesRecommend.jpg" width="92%" height="92%">
+        <div class="centered">More games on Steam!</div>
+    </a>
+</div>
+</div>
+</body>
+</html>
