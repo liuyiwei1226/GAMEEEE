@@ -1,5 +1,5 @@
 # GAMEEEE
-A Game Search and Recommendation Website
+A Game Search and Recommendation Website\n
 Implemented search, filters, review, recommendation and other functions to help people explore their favorite video games.
 Technology: 
 data cleaning: python (pandas) 
